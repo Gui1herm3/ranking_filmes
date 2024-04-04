@@ -1,33 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.9.5deb2
--- https://www.phpmyadmin.net/
---
--- Host: localhost:3306
--- Tempo de geração: 02-Abr-2024 às 17:25
--- Versão do servidor: 8.0.36-0ubuntu0.20.04.1
--- versão do PHP: 7.4.3-4ubuntu2.20
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Banco de dados: `filmes`
---
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `ENTRETERIMENTO`
---
-
 CREATE TABLE `ENTRETERIMENTO` (
   `ID` int NOT NULL,
   `NOME` varchar(100) NOT NULL,
@@ -43,12 +13,7 @@ CREATE TABLE `ENTRETERIMENTO` (
   `RANKING` int DEFAULT NULL,
   `RANKING_TIPO` varchar(50) DEFAULT NULL,
   `RANKING_NOME` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Extraindo dados da tabela `ENTRETERIMENTO`
---
-
+) 
 INSERT INTO `ENTRETERIMENTO` (`ID`, `NOME`, `TIPO`, `DIRETOR`, `ATOR_PRINCIPAL`, `ATRIZ_PRINCIPAL`, `ANO_LANCAMENTO`, `DURACAO_MINUTOS`, `CLASSIFICACAO_ETARIA`, `GENERO`, `NACIONALIDADE`, `RANKING`, `RANKING_TIPO`, `RANKING_NOME`) VALUES
 (1, 'Stranger Things', 'SÉRIE', 'Irmãos Duffer', 'Millie Bobby Brown', 'Winona Ryder', 2016, 60, '16+', 'Suspense', 'Estados Unidos', 22, 'Mundial', 'Netflix'),
 (2, 'Black Mirror', 'SÉRIE', 'Charlie Brooker', 'Bryce Dallas Howard', 'Hayley Atwell', 2011, 45, '18+', 'Ficção Científica', 'Reino Unido', 25, 'Mundial', 'Netflix'),
@@ -88,27 +53,8 @@ INSERT INTO `ENTRETERIMENTO` (`ID`, `NOME`, `TIPO`, `DIRETOR`, `ATOR_PRINCIPAL`,
 (36, 'Deadpool', 'FILME', 'Tim Miller', 'Ryan Reynolds', 'Morena Baccarin', 2016, 206, '18+', 'Ação/Comédia', 'Estados Unidos', 22, 'Nacional', 'Netflix'),
 (37, 'Homem aranha', 'FILME', 'Sam Raimi', 'Tobey Maguire', 'Kirsten Dunst', 2006, 90, '16+', 'Ação', 'Estados Unidos', 7, 'Mundial', 'Conhecido');
 
---
--- Índices para tabelas despejadas
---
-
---
--- Índices para tabela `ENTRETERIMENTO`
---
 ALTER TABLE `ENTRETERIMENTO`
   ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `ENTRETERIMENTO`
---
 ALTER TABLE `ENTRETERIMENTO`
   MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
